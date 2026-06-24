@@ -34,10 +34,12 @@ const FILE_PATH = path.join(__dirname, "keepalive.sql");
 
     const bodyText = await page.locator("body").innerText();
 
-    console.log("Page result:");
-    console.log(bodyText.slice(0, 2000));
+    console.log("========== PAGE RESULT START ==========");
+    console.log(bodyText);
+    console.log("========== PAGE RESULT END ==========");
 
     console.log("Keepalive completed.");
+    
   } catch (error) {
     console.error("Keepalive failed:");
     console.error(error);
