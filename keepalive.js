@@ -27,11 +27,13 @@ const FILE_PATH = path.join(__dirname, "keepalive.sql");
     await page.getByRole("button", {
       name: /upload\s*&\s*grade submission/i
     }).click();
-
-    console.log("Waiting for result...");
-
-    await page.waitForTimeout(10000);
-
+    
+    console.log("Waiting for grading results...");
+    
+    await page.getByText("Grading Results").waitFor({
+      timeout: 120000
+    });
+    
     const bodyText = await page.locator("body").innerText();
 
     console.log("========== PAGE RESULT START ==========");
