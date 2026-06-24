@@ -1,0 +1,11 @@
+{
+  "name": "supabase-site-keepalive",
+  "version": "1.0.0",
+  "scripts": {
+    "keepalive": "node keepalive.js"
+  },
+  "dependencies": {
+    "playwright": "^1.49.0"
+  },
+  "devDependencies": {}
+}
